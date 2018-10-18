@@ -9,5 +9,8 @@
     "posttest": "npm run lint"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
 }
