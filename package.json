@@ -1,0 +1,13 @@
+{
+  "name": "new_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./spec/*.spec.js --bail",
+    "lint": "eslint ./",
+    "posttest": "npm run lint"
+  },
+  "author": "",
+  "license": "ISC"
+}
