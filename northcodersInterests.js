@@ -1,23 +1,7 @@
 const northcodersInterests = [{
   "person": {
-    "interests": ["reading", "fussing the cat", "gaming", "coding", "staring blanky in space"],
-    "username": "popcorn"
-  }
-}, {
-  "status": 404,
-  "msg": "No such person"
-}, {
-  "person": {
-    "interests": ["tudor anthems", "smashing laptops", "typing loudly", "coding", "annoying my colleagues", "dancing queen"],
-    "username": "dedekind561"
-  }
-}, {
-  "status": 404,
-  "msg": "No such person"
-}, {
-  "person": {
-    "interests": ["food", "drink", "code", "marquee", "fantasy football", "actual football"],
-    "username": "rogersop"
+    "interests": ["Theatre", "Reading", "Scrabble", "pretending I know more about JavaScript than I actually do"],
+    "username": "MissMallion"
   }
 }, {
   "person": {
@@ -26,8 +10,33 @@ const northcodersInterests = [{
   }
 }, {
   "person": {
-    "interests": ["Theatre", "Reading", "Scrabble", "pretending I know more about JavaScript than I actually do"],
-    "username": "MissMallion"
+    "interests": ["tudor anthems", "smashing laptops", "typing loudly", "coding", "annoying my colleagues", "dancing queen"],
+    "username": "dedekind561"
+  }
+}, {
+  "person": {
+    "interests": ["reading", "fussing the cat", "gaming", "coding", "staring blanky in space"],
+    "username": "popcorn"
+  }
+}, {
+  "person": {
+    "interests": ["food", "drink", "code", "marquee", "fantasy football", "actual football"],
+    "username": "rogersop"
+  }
+}, {
+  "person": {
+    "interests": ["Reading", "squealing when doggos walk past", "code", "whistling harry potter badly"],
+    "username": "anatdean"
+  }
+}, {
+  "person": {
+    "interests": ["live music", "cooking", "travelling", "annoying my colleagues"],
+    "username": "ziziou91"
+  }
+}, {
+  "person": {
+    "interests": ["contemporary metaphysics", "cosmology", "writing semi-archaic JavaScript", "hiking", "painting watercolours"],
+    "username": "RuthYMNg"
   }
 }, {
   "person": {
@@ -36,25 +45,7 @@ const northcodersInterests = [{
   }
 }, {
   "person": {
-    "interests": ["live music", "cooking", "travelling", "annoying my colleagues"],
-    "username": "ziziou91"
-  }
-}, {
-  "status": 404,
-  "msg": "No such person"
-}, {
-  "person": {
-    "interests": ["Reading", "squealing when doggos walk past", "code", "whistling harry potter badly"],
-    "username": "anatdean"
-  }
-}, {
-  "person": {
     "interests": ["coding", "gaming", "double lunches", "brazilian jiu jitsu", "living of past glory"],
     "username": "P-Copley"
-  }
-}, {
-  "person": {
-    "interests": ["contemporary metaphysics", "cosmology", "writing semi-archaic JavaScript", "hiking", "painting watercolours"],
-    "username": "RuthYMNg"
   }
 }]

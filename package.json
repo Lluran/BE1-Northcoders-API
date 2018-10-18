@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha ./spec/*.spec.js --bail",
     "lint": "eslint ./",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "getNorthCodersInfo": "node ./getNorthCodersInfo"
   },
   "author": "",
   "license": "ISC",

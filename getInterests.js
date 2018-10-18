@@ -1,10 +1,15 @@
+function getInterestsAsync(){
+
 const fs = require('fs');
 const northcoders = require('./northcoders');
 const http = require('http');
 
 let interests = [];
 let count = 0;
-northcoders.forEach((person, index) => {
+const northcodersWithUsernames = northcoders.filter(coder => {
+  return coder.username !== "";
+})
+northcodersWithUsernames.forEach((person, index) => {
 
   const options = {
     hostname: 'nc-leaks.herokuapp.com',
@@ -21,9 +26,11 @@ northcoders.forEach((person, index) => {
     });
 
     response.on('end', () => {
-      interests.push(info);
+      if (!info.includes('404')) {
+        interests.push(info);
+      }
       count++;
-      if (count === northcoders.length) {
+      if (count === northcodersWithUsernames.length) {
         fs.writeFile('northcodersInterests.js', `const northcodersInterests = [${interests}]`, 'utf-8', (error) => {
           if (error) {
             throw error;
@@ -42,3 +49,7 @@ northcoders.forEach((person, index) => {
 
 
 })
+
+}
+
+module.exports = getInterestsAsync;
