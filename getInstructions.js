@@ -10,16 +10,16 @@ const options = {
 
 const req = https.request(options, (response) => {
   let body = '';
-response.on('data', (data) => {
-body += data.toString();
-})
-response.on('end', () => {
-  fs.writeFile('instructions.md', JSON.parse(body).crypticString, 'utf-8', (error) => {
-    if (error) {
-      throw error;
-    }
+  response.on('data', (data) => {
+    body += data.toString();
   })
-})
+  response.on('end', () => {
+    fs.writeFile('instructions.md', JSON.parse(body).crypticString, 'utf-8', (error) => {
+      if (error) {
+        throw error;
+      }
+    })
+  })
 })
 
 req.on('error', (error) => {
@@ -41,4 +41,4 @@ req.end();
 
 
 
-module.exports = {/* Your variables here */}
+module.exports = { /* Your variables here */ }
