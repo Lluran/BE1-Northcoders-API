@@ -69,11 +69,18 @@ function getSpecificNorthcoder(response, userName) {
       const northcoders = JSON.parse(data);
       const person = northcoders.filter(employee => {
         return employee.username === userName;
-      })
-      response.setHeader('Content-Type', 'application/JSON');
-      response.statusCode = 200;
-      response.write(JSON.stringify(person));
-      response.end();
+      });
+      if (person[0] === undefined) {
+        response.setHeader('Content-Type', 'application/JSON')
+        response.statusCode = 403;
+        response.write(JSON.stringify('Unable to find the information requested'));
+        response.end();
+      } else {
+        response.setHeader('Content-Type', 'application/JSON');
+        response.statusCode = 200;
+        response.write(JSON.stringify(person));
+        response.end();
+      }
     }
   })
 }
@@ -87,11 +94,18 @@ function getCoderPets(response, userName) {
       const coder = northcoders.filter(employee => {
         return employee.person.username === userName;
       })
-      const petInfo = JSON.stringify(coder[0].person.pets);
-      response.setHeader('Content-Type', 'application/JSON');
-      response.statusCode = 200;
-      response.write(petInfo);
-      response.end();
+      if (coder[0] === undefined) {
+        response.setHeader('Content-Type', 'application/JSON')
+        response.statusCode = 403;
+        response.write(JSON.stringify('Unable to find the information requested'));
+        response.end();
+      } else {
+        const petInfo = JSON.stringify(coder[0].person.pets);
+        response.setHeader('Content-Type', 'application/JSON');
+        response.statusCode = 200;
+        response.write(petInfo);
+        response.end();
+      }
     }
   })
 }
@@ -105,11 +119,18 @@ function getCoderInterests(response, userName) {
       const coder = northcoders.filter(employee => {
         return employee.person.username === userName;
       })
-      const interestsInfo = JSON.stringify(coder[0].person.interests);
-      response.setHeader('Content-Type', 'application/JSON');
-      response.statusCode = 200;
-      response.write(interestsInfo);
-      response.end();
+      if (coder[0] === undefined) {
+        response.setHeader('Content-Type', 'application/JSON')
+        response.statusCode = 403;
+        response.write(JSON.stringify('Unable to find the information requested'));
+        response.end();
+      } else {
+        const interestsInfo = JSON.stringify(coder[0].person.interests);
+        response.setHeader('Content-Type', 'application/JSON');
+        response.statusCode = 200;
+        response.write(interestsInfo);
+        response.end();
+      }
     }
   })
 }
