@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const usernameURL = /\/api\/northcoders\/\w+$/gm;
 const petsURL = /\/api\/pets\/\w+$/gm;
+const interestsURL = /\/api\/interests\/\w+$/gm;
 
 const server = http.createServer((request, response) => {
 
@@ -36,8 +37,15 @@ const server = http.createServer((request, response) => {
     } else {
 
     }
-  }
+  } else if (interestsURL.test(request.url)) {
+    if (request.method === 'GET') {
+      const usernameArr = request.url.match(/\w+$/gm);
+      const userName = usernameArr[0];
+      getCoderInterests(response, userName);
+    } else {
 
+    }
+  }
 })
 
 function getNorthcoders(response) {
@@ -86,7 +94,26 @@ function getCoderPets(response, userName) {
       response.end();
     }
   })
-
 }
+
+function getCoderInterests(response, userName) {
+  fs.readFile(`${__dirname}/northcodersInterests.json`, 'utf-8', (error, data) => {
+    if (error) {
+      throw error
+    } else {
+      const northcoders = JSON.parse(data);
+      const coder = northcoders.filter(employee => {
+        return employee.person.username === userName;
+      })
+      const interestsInfo = JSON.stringify(coder[0].person.interests);
+      response.setHeader('Content-Type', 'application/JSON');
+      response.statusCode = 200;
+      response.write(interestsInfo);
+      response.end();
+    }
+  })
+}
+
+
 
 server.listen(9090);
