@@ -3,23 +3,6 @@
     "person": {
       "pets": [
         {
-          "name": "Opal",
-          "kind": "cat",
-          "alive": true
-        },
-        {
-          "name": "Jeffry",
-          "kind": "cat",
-          "alive": false
-        }
-      ],
-      "username": "popcorn"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
           "name": "Barney",
           "kind": "dog",
           "alive": true
@@ -31,23 +14,6 @@
         }
       ],
       "username": "tomosim"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
-          "name": "Holly",
-          "kind": "hamster",
-          "alive": false
-        },
-        {
-          "name": "James Pond",
-          "kind": "goldfish",
-          "alive": false
-        }
-      ],
-      "username": "MissMallion"
     }
   },
   {
@@ -71,6 +37,40 @@
     "person": {
       "pets": [
         {
+          "name": "Holly",
+          "kind": "hamster",
+          "alive": false
+        },
+        {
+          "name": "James Pond",
+          "kind": "goldfish",
+          "alive": false
+        }
+      ],
+      "username": "MissMallion"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
+          "name": "Opal",
+          "kind": "cat",
+          "alive": true
+        },
+        {
+          "name": "Jeffry",
+          "kind": "cat",
+          "alive": false
+        }
+      ],
+      "username": "popcorn"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
           "name": "Henna",
           "kind": "cat",
           "alive": false
@@ -83,24 +83,12 @@
     "person": {
       "pets": [
         {
-          "name": "Felix",
+          "name": "Shnitzel",
           "kind": "cat",
           "alive": true
         }
       ],
-      "username": "P-Copley"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
-          "name": "Karl",
-          "kind": "llama",
-          "alive": true
-        }
-      ],
-      "username": "ziziou91"
+      "username": "anatdean"
     }
   },
   {
@@ -124,12 +112,12 @@
     "person": {
       "pets": [
         {
-          "name": "Shnitzel",
+          "name": "Felix",
           "kind": "cat",
           "alive": true
         }
       ],
-      "username": "anatdean"
+      "username": "P-Copley"
     }
   },
   {
@@ -147,6 +135,18 @@
         }
       ],
       "username": "icellusedkars"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
+          "name": "Karl",
+          "kind": "llama",
+          "alive": true
+        }
+      ],
+      "username": "ziziou91"
     }
   }
 ]

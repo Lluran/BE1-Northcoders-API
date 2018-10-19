@@ -7,11 +7,13 @@
     "test": "mocha ./spec/*.spec.js --bail",
     "lint": "eslint ./",
     "posttest": "npm run lint",
-    "getNorthCodersInfo": "node ./getNorthCodersInfo"
+    "getNorthCodersInfo": "node ./client_functions/getNorthCodersInfo",
+    "start": "nodemon ./serverAPI"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "nodemon": "^1.18.4"
   }
 }

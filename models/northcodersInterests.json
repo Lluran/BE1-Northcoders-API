@@ -12,6 +12,42 @@
   {
     "person": {
       "interests": [
+        "tudor anthems",
+        "smashing laptops",
+        "typing loudly",
+        "coding",
+        "annoying my colleagues",
+        "dancing queen"
+      ],
+      "username": "dedekind561"
+    }
+  },
+  {
+    "person": {
+      "interests": [
+        "Theatre",
+        "Reading",
+        "Scrabble",
+        "pretending I know more about JavaScript than I actually do"
+      ],
+      "username": "MissMallion"
+    }
+  },
+  {
+    "person": {
+      "interests": [
+        "contemporary metaphysics",
+        "cosmology",
+        "writing semi-archaic JavaScript",
+        "hiking",
+        "painting watercolours"
+      ],
+      "username": "RuthYMNg"
+    }
+  },
+  {
+    "person": {
+      "interests": [
         "reading",
         "fussing the cat",
         "gaming",
@@ -24,14 +60,13 @@
   {
     "person": {
       "interests": [
-        "tudor anthems",
-        "smashing laptops",
-        "typing loudly",
         "coding",
-        "annoying my colleagues",
-        "dancing queen"
+        "gaming",
+        "double lunches",
+        "brazilian jiu jitsu",
+        "living of past glory"
       ],
-      "username": "dedekind561"
+      "username": "P-Copley"
     }
   },
   {
@@ -62,28 +97,6 @@
   {
     "person": {
       "interests": [
-        "Theatre",
-        "Reading",
-        "Scrabble",
-        "pretending I know more about JavaScript than I actually do"
-      ],
-      "username": "MissMallion"
-    }
-  },
-  {
-    "person": {
-      "interests": [
-        "Reading",
-        "squealing when doggos walk past",
-        "code",
-        "whistling harry potter badly"
-      ],
-      "username": "anatdean"
-    }
-  },
-  {
-    "person": {
-      "interests": [
         "live music",
         "cooking",
         "travelling",
@@ -95,25 +108,12 @@
   {
     "person": {
       "interests": [
-        "coding",
-        "gaming",
-        "double lunches",
-        "brazilian jiu jitsu",
-        "living of past glory"
+        "Reading",
+        "squealing when doggos walk past",
+        "code",
+        "whistling harry potter badly"
       ],
-      "username": "P-Copley"
-    }
-  },
-  {
-    "person": {
-      "interests": [
-        "contemporary metaphysics",
-        "cosmology",
-        "writing semi-archaic JavaScript",
-        "hiking",
-        "painting watercolours"
-      ],
-      "username": "RuthYMNg"
+      "username": "anatdean"
     }
   }
 ]

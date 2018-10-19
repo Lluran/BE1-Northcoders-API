@@ -6,7 +6,7 @@ function getPetsAsync() {
 
   let pets = [];
   let count = 0;
-  fs.readFile(`${__dirname}/northcoders.json`, 'utf-8', (error, data) => {
+  fs.readFile(`./models/northcoders.json`, 'utf-8', (error, data) => {
     const northcoders = JSON.parse(data);
     const northcodersWithUsernames = northcoders.filter(coder => {
       return coder.username !== "";
@@ -36,14 +36,14 @@ function getPetsAsync() {
           count++;
           if (count === northcodersWithUsernames.length) {
             const fs = require('fs');
-            fs.writeFile('northcodersPets.json', JSON.stringify(pets, null, 2) , 'utf-8', (error) => {
+            fs.writeFile('./models/northcodersPets.json', JSON.stringify(pets, null, 2) , 'utf-8', (error) => {
               if (error) {
                 throw error;
               }
             })
             let interests = [];
             let count = 0;
-            fs.readFile(`${__dirname}/northcoders.json`, 'utf-8', (error, data)=>{
+            fs.readFile(`./models/northcoders.json`, 'utf-8', (error, data)=>{
               if (error) {
                 throw error
               }
@@ -75,7 +75,7 @@ function getPetsAsync() {
                     }
                     count++;
                     if (count === northcodersWithUsernames.length) {
-                      fs.writeFile('northcodersInterests.json',JSON.stringify(interests, null, 2), 'utf-8', (error) => {
+                      fs.writeFile('./models/northcodersInterests.json',JSON.stringify(interests, null, 2), 'utf-8', (error) => {
                         if (error) {
                           throw error;
                         }
