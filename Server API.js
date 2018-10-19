@@ -72,7 +72,7 @@ function getSpecificNorthcoder(response, userName) {
       });
       if (person[0] === undefined) {
         response.setHeader('Content-Type', 'application/JSON')
-        response.statusCode = 403;
+        response.statusCode = 404;
         response.write(JSON.stringify('Unable to find the information requested'));
         response.end();
       } else {
@@ -96,7 +96,7 @@ function getCoderPets(response, userName) {
       })
       if (coder[0] === undefined) {
         response.setHeader('Content-Type', 'application/JSON')
-        response.statusCode = 403;
+        response.statusCode = 404;
         response.write(JSON.stringify('Unable to find the information requested'));
         response.end();
       } else {
@@ -121,7 +121,7 @@ function getCoderInterests(response, userName) {
       })
       if (coder[0] === undefined) {
         response.setHeader('Content-Type', 'application/JSON')
-        response.statusCode = 403;
+        response.statusCode = 404;
         response.write(JSON.stringify('Unable to find the information requested'));
         response.end();
       } else {
