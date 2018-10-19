@@ -26,7 +26,7 @@ const req = http.request(options, (response) => {
       }
     })
 
-    fs.writeFile('northcoders.js', `const northcoders = ${JSON.stringify(northcoders, null, 2)} \n module.exports = northcoders;`, 'utf-8', (error) => {
+    fs.writeFile('northcoders.json', JSON.stringify(northcoders, null, 2), 'utf-8', (error) => {
       if (error) {
         throw error
       };

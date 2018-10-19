@@ -1,4 +1,4 @@
-const northcoders = [
+[
   {
     "firstName": "Steph",
     "lastName": "Slater",
@@ -142,5 +142,4 @@ const northcoders = [
     },
     "username": "mmmauro"
   }
-] 
- module.exports = northcoders;
+]
