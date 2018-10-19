@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-exports.getCoderPets = (response, userName) => {
+exports.getCoderPets = (response, userName, queries) => {
   fs.readFile(`./models/northcodersPets.json`, 'utf-8', (error, data) => {
     if (error) {
       throw error

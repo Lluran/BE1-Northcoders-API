@@ -1,13 +1,28 @@
-const http = require('http'); 
-const usernameURL = /\/api\/northcoders\/\w+$/gm;
-const petsURL = /\/api\/pets\/\w+$/gm;
-const interestsURL = /\/api\/interests\/\w+$/gm;
-const {getNorthcoders, getSpecificNorthcoder} = require('./controllers/northcoders');
-const {getCoderInterests} = require('./controllers/interests');
-const {getCoderPets} = require('./controllers/pets');
+const http = require('http');
+const {
+  getNorthcoders,
+  getSpecificNorthcoder
+} = require('./controllers/northcoders');
+const {
+  getCoderInterests
+} = require('./controllers/interests');
+const {
+  getCoderPets
+} = require('./controllers/pets');
+
 
 const server = http.createServer((request, response) => {
+  const usernameURL = /\/api\/northcoders\/\w+$/gm;
+  const petsURL = /\/api\/pets\/\w+$/gm;
+  const interestsURL = /\/api\/interests\/\w+$/gm;
   const url = request.url.split('?')[0];
+  const queries = {};
+  if (request.url.split('?').length > 1) {
+    request.url.split('?')[1].split('&').forEach(element => {
+      const [key, value] = element.split('=');
+      queries[key] = value;
+    });
+  }
   if (url === '/api') {
     if (request.method === 'GET') {
       response.setHeader('Content-Type', 'application/JSON');
@@ -19,7 +34,7 @@ const server = http.createServer((request, response) => {
     }
   } else if (url === '/api/northcoders') {
     if (request.method === 'GET') {
-      getNorthcoders(response);
+      getNorthcoders(response, queries);
     } else {
 
     }
@@ -27,7 +42,7 @@ const server = http.createServer((request, response) => {
     if (request.method === 'GET') {
       const usernameArr = url.match(/\w+$/gm);
       const userName = usernameArr[0];
-      getSpecificNorthcoder(response, userName)
+      getSpecificNorthcoder(response, userName, queries)
     } else {
 
     }
@@ -35,7 +50,7 @@ const server = http.createServer((request, response) => {
     if (request.method === 'GET') {
       const usernameArr = url.match(/\w+$/gm);
       const userName = usernameArr[0];
-      getCoderPets(response, userName);
+      getCoderPets(response, userName, queries);
     } else {
 
     }
@@ -43,7 +58,7 @@ const server = http.createServer((request, response) => {
     if (request.method === 'GET') {
       const usernameArr = url.match(/\w+$/gm);
       const userName = usernameArr[0];
-      getCoderInterests(response, userName);
+      getCoderInterests(response, userName, queries);
     } else {
 
     }

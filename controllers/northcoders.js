@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-exports.getNorthcoders = (response) => {
+exports.getNorthcoders = (response, queries) => {
   fs.readFile(`./models/northcoders.json`, 'utf-8', (error, data) => {
     if (error) {
       throw error
