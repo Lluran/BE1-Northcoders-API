@@ -3,6 +3,40 @@
     "person": {
       "pets": [
         {
+          "name": "Opal",
+          "kind": "cat",
+          "alive": true
+        },
+        {
+          "name": "Jeffry",
+          "kind": "cat",
+          "alive": false
+        }
+      ],
+      "username": "popcorn"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
+          "name": "Barney",
+          "kind": "dog",
+          "alive": true
+        },
+        {
+          "name": "Shania",
+          "kind": "rock",
+          "alive": false
+        }
+      ],
+      "username": "tomosim"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
           "name": "Holly",
           "kind": "hamster",
           "alive": false
@@ -37,17 +71,24 @@
     "person": {
       "pets": [
         {
-          "name": "Opal",
-          "kind": "cat",
-          "alive": true
-        },
-        {
-          "name": "Jeffry",
+          "name": "Henna",
           "kind": "cat",
           "alive": false
         }
       ],
-      "username": "popcorn"
+      "username": "RuthYMNg"
+    }
+  },
+  {
+    "person": {
+      "pets": [
+        {
+          "name": "Felix",
+          "kind": "cat",
+          "alive": true
+        }
+      ],
+      "username": "P-Copley"
     }
   },
   {
@@ -60,23 +101,6 @@
         }
       ],
       "username": "ziziou91"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
-          "name": "Barney",
-          "kind": "dog",
-          "alive": true
-        },
-        {
-          "name": "Shania",
-          "kind": "rock",
-          "alive": false
-        }
-      ],
-      "username": "tomosim"
     }
   },
   {
@@ -100,24 +124,12 @@
     "person": {
       "pets": [
         {
-          "name": "Felix",
+          "name": "Shnitzel",
           "kind": "cat",
           "alive": true
         }
       ],
-      "username": "P-Copley"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
-          "name": "Henna",
-          "kind": "cat",
-          "alive": false
-        }
-      ],
-      "username": "RuthYMNg"
+      "username": "anatdean"
     }
   },
   {
@@ -135,18 +147,6 @@
         }
       ],
       "username": "icellusedkars"
-    }
-  },
-  {
-    "person": {
-      "pets": [
-        {
-          "name": "Shnitzel",
-          "kind": "cat",
-          "alive": true
-        }
-      ],
-      "username": "anatdean"
     }
   }
 ]
