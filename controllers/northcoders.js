@@ -1,3 +1,4 @@
+//ADD FUNCTIONALITY TO DEAL WITH QUERIES
 const fs = require('fs');
 
 exports.getNorthcoders = (response, queries) => {
@@ -13,7 +14,7 @@ exports.getNorthcoders = (response, queries) => {
   })
 }
 
-exports.getSpecificNorthcoder = (response, userName) => {
+exports.getSpecificNorthcoder = (response, userName, queries) => {
   fs.readFile(`./models/northcoders.json`, 'utf-8', (error, data) => {
     if (error) {
       throw error

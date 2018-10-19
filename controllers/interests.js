@@ -1,3 +1,4 @@
+//ADD FUNCTIONALITY TO DEAL WITH QUERIES
 const fs = require('fs');
 
 exports.getCoderInterests = (response, userName, queries) => {
